@@ -1,5 +1,5 @@
 # Struktur Data 
-Nama  : Muhammad Zaki Syauqi 
-NIM   : 240705107
+Nama  : Muhammad Zaki Syauqi  
+NIM   : 240705107  
 Dosen : 
 
