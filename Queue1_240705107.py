@@ -4,7 +4,7 @@ class Queue:
         self.qlist = list()
 
     # method cek isEmpty
-    def isEmpty(self):
+    def is_empty(self):
         return len(self) == 0
     
     # method berapa banyak elemen di dalam objek
@@ -31,7 +31,7 @@ class Queue:
                 print(item, end='')
     
     # method untuk Menghapus seluruh elemen queue sampai kosong
-    def DeleteAll(self):
+    def delete_all(self):
         while not self.isEmpty():
             self.dequeue()
 
@@ -46,7 +46,7 @@ while cek:
     print('1. Tambah elemen pada queue')
     print('2. Tampil elemen pada queue')
     print('3. Hapus elemen pada queue')
-    print('3. Hapus seluruh data pada queue')
+    print('4. Hapus seluruh data pada queue')
     print('-----------------------------------')
     print('0. Keluar')
     print()
@@ -62,8 +62,8 @@ while cek:
                 data = input('Masukkan data ingin diinput: ')
                 myQueue.enqueue(data)
                 i+=1
-            else:
-                print('Jumlah data minimal 1!!')
+        else:
+            print('Jumlah data minimal 1!!')
     
     elif pil == 2:
         print('Isi Queue: ')
