@@ -1,22 +1,28 @@
 class Queue:
-    def __init__(self):
+    # method wadah data
+    def __init__(self): #__init__ = Constructor 
         self.qlist = list()
-    
+
+    # method cek isEmpty
     def isEmpty(self):
         return len(self) == 0
     
-    def __lem__(self):
+    # method berapa banyak elemen di dalam objek
+    def __len__(self):
         return len(self.qlist)
     
+    # method enqueue
     def enqueue(self, data):
         self.qlist.append(data)
 
+    # method dequeue
     def dequeue(self):
         if self.isEmpty():
             print('Queue kososng. Tidak ada data yang dapat di dequeu.')
         else:
             return self.qlist.pop(0)
     
+    # method untuk menunjukkan isi antrian (queue) ke layar
     def display(self):
         if self.isEmpty():
             print('Queue kososng. Tidak ada data yang dapat di ditampilkan.')
@@ -24,6 +30,7 @@ class Queue:
             for item in self.qlist:
                 print(item, end='')
     
+    # method untuk Menghapus seluruh elemen queue sampai kosong
     def DeleteAll(self):
         while not self.isEmpty():
             self.dequeue()
