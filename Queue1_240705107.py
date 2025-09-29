@@ -3,7 +3,7 @@ class Queue:
     def __init__(self): #__init__ = Constructor 
         self.qlist = list()
 
-    # method cek isEmpty
+    # method cek is_empty
     def is_empty(self):
         return len(self) == 0
     
@@ -17,14 +17,14 @@ class Queue:
 
     # method dequeue
     def dequeue(self):
-        if self.isEmpty():
+        if self.is_empty():
             print('Queue kososng. Tidak ada data yang dapat di dequeu.')
         else:
             return self.qlist.pop(0)
     
     # method untuk menunjukkan isi antrian (queue) ke layar
     def display(self):
-        if self.isEmpty():
+        if self.is_empty():
             print('Queue kososng. Tidak ada data yang dapat di ditampilkan.')
         else:
             for item in self.qlist:
@@ -32,7 +32,7 @@ class Queue:
     
     # method untuk Menghapus seluruh elemen queue sampai kosong
     def delete_all(self):
-        while not self.isEmpty():
+        while not self.is_empty():
             self.dequeue()
 
 #Create Queue
@@ -54,7 +54,7 @@ while cek:
     pil = int(input('Masukkan pilihan anda: '))
 
     if pil == 1:
-        jum = int(input('Masukkan data yang ingin diinput: '))
+        jum = int(input('Masukkan jumlah data: '))
 
         if jum > 0:
             i = 1
@@ -73,7 +73,7 @@ while cek:
         myQueue.dequeue()
     
     elif pil == 4:
-        myQueue.DeleteAll()
+        myQueue.delete_all()
     
     elif pil == 0:
         print('Bye trooopres....\n')
