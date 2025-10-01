@@ -25,7 +25,7 @@ class Queue:
     # method untuk menunjukkan isi antrian (queue) ke layar
     def display(self):
         if self.is_empty():
-            print('Queue kososng. Tidak ada data yang dapat di ditampilkan.')
+            print('Queue kosong. Tidak ada data yang dapat di ditampilkan.')
         else:
             for item in self.qlist:
                 print(item, end='')
@@ -39,7 +39,7 @@ class Queue:
 myQueue = Queue()
 
 cek = True
-
+#Menu start
 while cek:
     print()
     print('-------Masukkan Pilihan Anda-------')
