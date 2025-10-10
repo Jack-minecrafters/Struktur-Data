@@ -9,12 +9,12 @@ class DoubleLinkedList:
         self.head = None
         self.tail = None
     
-    def isEmpty(self):
+    def is_empty(self):
         return self.head is None
 
-    def insertAtBeginning(self, data):
+    def insert_at_beginning(self, data):
         newNode = Node(data)
-        if self.isEmpty():
+        if self.is_empty():
             self.head = self.tail = newNode
         else:
             newNode.next = self.head
@@ -31,7 +31,7 @@ class DoubleLinkedList:
                 if current.data == value:
                     newNode.next = current
                     current.previous.next = newNode
-                    newNode.previous = current.prėvious
+                    newNode.previous = current.previous
                     current.previous = newNode
                     return
                 else:
@@ -125,7 +125,7 @@ print()
 print('Menampilkan data dari depan ke belakang: ', end ='')
 dll.display_forward() # Output: 5 10 20 30
 print('Menampilkan data dari belakang ke depan: ', end ='')
-dll;display_backward() # Output: 30 20 105
+dll.display_backward() # Output: 30 20 105
 print()
 
 
