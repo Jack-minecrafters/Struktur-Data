@@ -87,7 +87,7 @@ while running:
         cQueue.delete_all()
 
     elif choice == 0:
-        print('Sampai jumpa, kafe tutup ☕✨')
+        print('Sampai jumpa, kafe tutup')
         running = False
 
     else:

@@ -1,8 +1,9 @@
+#inisiasi kelas
 class Queue:
-    def __init__(self):
+    def __init__(self): #konstruktor
         self.clist = []
 
-    def is_empty(self):
+    def is_empty(self): #
         return len(self.clist) == 0
 
     def __len__(self):
@@ -28,7 +29,8 @@ class Queue:
                 print(self.clist[i], end='')
                 if i != len(self.clist) - 1:
                     print(' <- ', end='')
-            print()  # biar rapi barisnya
+            print()
+            print(f"Jumlah konsumen: {len(self)} orang")
 
     def delete_all(self):
         konfirmasi = input("Yakin ingin reset semua data? (y/n): ").lower()
@@ -86,8 +88,8 @@ while running:
         cQueue.delete_all()
 
     elif choice == 0:
-        print('Bye~~~')
+        print('Bye beb :3')
         running = False
 
     else:
-        print('Pilihan tidak ada')
+        print('Ngawur cik, yang ada ada aja.')
