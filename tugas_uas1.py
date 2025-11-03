@@ -1,15 +1,15 @@
-#inisiasi kelas
+# inisiasi kelas
 class Queue:
-    def __init__(self): #konstruktor
+    def __init__(self): # konstruktor
         self.clist = []
 
-    def is_empty(self): #
+    def is_empty(self): # cek kosong
         return len(self.clist) == 0
 
-    def __len__(self):
+    def __len__(self): # cek length
         return len(self.clist)
 
-    def enqueue(self, data):
+    def enqueue(self, data): #
         self.clist.append(data)
 
     def dequeue(self):
