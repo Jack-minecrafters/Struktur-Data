@@ -64,6 +64,44 @@ class LinkedList:
             current = current.next
         
         return urutan
+    
+    def remove_first(self):
+        if self.head is None:
+            print("tidak ada data yang bisa dihapus")
+        else:
+            self.head = self.head.next
+
+    def remove_last(self):
+        if self.head is None:
+            print("tidak ada data yang bisa dihapus")
+        elif self.head.next is None:
+            self.head = None
+        else:
+            node_sebelumnya = None
+            node_sekarang = self.head
+
+            while node_sekarang.next:
+                node_sebelumnya = node_sekarang
+                node_sekarang = node_sekarang.next
+
+            node_sebelumnya.next = None
+
+    def remove_at(self, index):
+        if index < 0 or index >= self.length():
+            print("index invalid")
+        elif index == 0:
+            self.remove_first()
+        else:
+            urutan = 0
+            node_sekarang = self.head
+
+            while urutan < index - 1:
+                node_sekarang = node_sekarang.next
+                urutan += 1
+
+            node_sekarang.next = node_sekarang.next.next
+
+
 
 ll = LinkedList()
 
