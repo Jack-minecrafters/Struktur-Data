@@ -83,7 +83,7 @@ class LinkedList:
             while node_sekarang.next:
                 node_sebelumnya = node_sekarang
                 node_sekarang = node_sekarang.next
-
+# def
             node_sebelumnya.next = None
 
     def remove_at(self, index):
